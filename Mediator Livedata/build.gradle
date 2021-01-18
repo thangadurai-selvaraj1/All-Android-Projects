@@ -1,0 +1,71 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.61'
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+
+ext {
+    //Support lib
+    liveData = '2.2.0-rc02'
+//Otp pin view
+    pinview = '2.0.3'
+    //Extension
+    fragmentExtLib = '1.2.0-beta02'
+    //DB
+    room = "2.2.0"
+    //Debug DB
+    debugDB = '1.0.6'
+    //DI
+    dagger = '2.23.2'
+    //Otp pin view
+    pinview = '2.0.3'
+    //Permission
+    permission = '3.0.0'
+    //Animation
+    lottie = '3.0.6'
+    //Toast
+    toasty = '0.9.0'
+    //Glide
+    glide = '4.9.0'
+    //Maps
+    maps = '17.0.0'
+    //Google Location
+    location = '17.0.0'
+    //Google vision
+    vision = '18.0.0'
+    //Text auto size
+    sdp = '1.0.6'
+    //Network
+    retrofit = '2.6.0'
+    okhttp = '3.12.0'
+    //Loading
+    //aviLibrary = '2.1.3'
+    loadingLib = '1.4.0'
+}
+
+
