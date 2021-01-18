@@ -1,0 +1,74 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.4.10"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.28-alpha'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+/*
+ext {
+    //Support lib
+    liveData = '2.2.0'
+    naviagtion = '1.0.0'
+    //Extension
+    fragmentExt = '1.2.2'
+    //DB
+    room = "2.2.5"
+    //Debug DB
+    debugDB = '1.0.6'
+    //DI
+    dagger = '2.25.2'
+    //Otp pin view
+    pinview = '2.0.3'
+    //Permission
+    permission = '3.0.0'
+    //Animation
+    lottie = '3.0.6'
+    //Toast
+    toasty = '0.9.0'
+    //Glide
+    glide = '4.11.0'
+    //Maps
+    maps = '17.0.0'
+    //Google Location
+    location = '17.0.0'
+    //Google vision
+    vision = '19.0.0'
+    //Text auto size
+    sdp = '1.0.6'
+    //Network
+    retrofit = '2.6.0'
+    okhttp = '3.12.0'
+    xmlconverter = '2.3.0'
+    //Loading
+    loading = '1.4.0'
+    //Push notification
+    message='20.1.2'
+    //Crash report
+    crash='2.10.1'
+    //Crash report
+    analytics='17.2.3'
+}*/
