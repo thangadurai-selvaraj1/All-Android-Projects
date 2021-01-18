@@ -1,0 +1,32 @@
+   private fun addPhoto() {
+        // Camera.
+        val cameraIntents = ArrayList<Intent>()
+        val captureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        val packageManager = packageManager
+        val listCam = packageManager.queryIntentActivities(captureIntent, 0)
+        for (res in listCam) {
+            val packageName = res.activityInfo.packageName
+            val intent = Intent(captureIntent)
+            intent.component = ComponentName(res.activityInfo.packageName, res.activityInfo.name)
+            intent.setPackage(packageName)
+            intent.putExtra(MediaStore.MEDIA_IGNORE_FILENAME, ".nomedia")
+
+            cameraIntents.add(intent)
+            //startActivityForResult(intent, 1)
+        }
+
+        // Filesystem.
+        val galleryIntent = Intent()
+        galleryIntent.type = "image/*"
+        galleryIntent.action = Intent.ACTION_GET_CONTENT
+
+        // Chooser of filesystem options.
+        val chooserIntent = Intent.createChooser(galleryIntent, "Select Image")
+
+        // Add the camera options.
+        chooserIntent.putExtra(
+            Intent.EXTRA_INITIAL_INTENTS,
+            cameraIntents.toTypedArray<Parcelable>()
+        )
+        startActivityForResult(chooserIntent, 200)
+    }
