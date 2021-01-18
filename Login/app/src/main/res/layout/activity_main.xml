@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="contact"
+            type="com.example.login.POJO" />
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="clickbutton"
+            type="com.example.login.MainActivity.SimpleClickEvent" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isScheduleChecked"
+            type="java.lang.Boolean" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <include
+            android:id="@+id/next"
+            layout="@layout/display_main"
+            bind:listener="@{listener}"
+            bind:login1="@{contact}" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
