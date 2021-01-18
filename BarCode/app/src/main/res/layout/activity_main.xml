@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<layout>
+
+    <data>
+        <variable
+            name="model"
+            type="com.example.login.ListView"/>
+
+        <variable
+            name="buttonClick"
+            type="com.example.login.ListView.ClickEvent"/>
+    </data>-->
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/melt"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+
+        android:orientation="horizontal"
+
+        bind:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/button"
+            style="@style/ButtonNext"
+            android:layout_width="match_parent"
+            android:text="Welcome" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        bind:layout_constraintEnd_toEndOf="parent"
+        bind:layout_constraintStart_toStartOf="parent"
+        bind:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="549dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+    <!-- <include
+         android:id="@+id/display_text"
+         layout="@layout/display_text"
+         bind:abc="@{model}"
+
+         />-->
+</android.support.constraint.ConstraintLayout>
+
