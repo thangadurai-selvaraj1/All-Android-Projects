@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TrainingStudio</string>
+    <string name="client_id">22557248613d4c21b0c99c44babdbd7c</string>
+    <string name="callback_url">https://instagram.com/</string>
+    <string name="base_url">https://api.instagram.com/</string>
+    <string name="get_user_info_url">
+https://api.instagram.com/v1/users/self/?access_token=
+</string>
+
+
+    <string name="sign_in">Sign In</string>
+    <string name="email_phone">Email / Phone Number</string>
+    <string name="password">Password</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="enroll">Enroll</string>
+    <string name="login">Login</string>
+    <string name="social_meadia_account">Or sign in with social account</string>
+
+
+    <string name="verify">Verify Your Number</string>
+    <string name="verify_cmts">Please enter your mobile number to receive One Time Password</string>
+    <string name="enter_phone">Enter Your Phone Number</string>
+    <string name="send_otp">Send OTP</string>
+
+
+    <string name="verify_code">Verify Code</string>
+    <string name="verify_btn">Verify</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

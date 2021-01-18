@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="com.example.trainingstudio.viewmodel.LoginViewModel" />
+
+        <variable
+            name="loginModel"
+            type="com.example.trainingstudio.model.Login" />
+
+        <variable
+            name="themes"
+            type="com.example.trainingstudio.db.ThemesDetail" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity2">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="120sp"
+                    android:layout_height="120sp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20sp"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    style="@style/TextViewHeading"
+                    android:text="@string/sign_in"
+                    app:color="@{themes.editTextColor}"
+
+
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:errorText="@{loginViewModel.sUserNameError}"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@color/white">
+
+                    <android.support.design.widget.TextInputEditText
+                        style="@style/TextEditText"
+                        android:drawableStart="@drawable/ic_mail"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/email_phone"
+                        android:text="@={loginModel.username}"
+                        android:textColor="@color/white"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:errorText="@{loginViewModel.sPasswordError}"
+                    android:textColorHint="@color/white"
+                    app:errorTextAppearance="@color/white"
+                    app:passwordToggleEnabled="true"
+
+
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        style="@style/TextEditText"
+                        android:drawableStart="@drawable/ic_lock"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/password"
+                        android:text="@={loginModel.password}"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remember"
+                        style="@style/TextViewSmall"
+                        android:layout_marginStart="48sp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/forgot_pass"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/forgot_Password"
+                        style="@style/TextViewSmall"
+                        android:layout_marginEnd="48sp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/enroll" />
+
+                </LinearLayout>
+
+                <Button
+                    style="@style/Botton"
+                    android:onClick="@{loginViewModel::onLoginClick}"
+                    android:text="@string/login"
+
+                    />
+
+                <TextView
+                    style="@style/TextViewSmall"
+                    android:text="@string/social_meadia_account"
+                    android:textAlignment="center" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50sp"
+                    android:layout_marginEnd="50sp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <ImageButton
+                        android:id="@+id/image_Button_Fb"
+                        style="@style/ImageButton"
+                        android:background="@color/colorPrimary"
+                        android:padding="2sp"
+
+
+                        />
+
+                    <ImageButton
+                        android:id="@+id/image_Button_Tweet"
+                        style="@style/ImageButton"
+                        android:background="@color/colorPrimary"
+                        android:padding="2sp"
+
+                        />
+
+
+                    <ImageButton
+                        android:id="@+id/image_Button_Insta"
+                        style="@style/ImageButton"
+                        android:background="@color/colorPrimary"
+                        android:padding="2sp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
