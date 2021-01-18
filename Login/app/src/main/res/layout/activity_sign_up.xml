@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/large"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_View"
+                style="@style/TitleTextView"
+                android:text="@string/sign_up" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/user_Name"
+                style="@style/TitleTextInputLayout"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_Name"
+                    style="@style/TextInputEditText"
+                    android:background="@drawable/edit_rounded"
+                    android:drawableLeft="@drawable/ic_person_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/user_name"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/user_Email"
+                style="@style/TitleTextInputLayout"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_Email"
+                    style="@style/TextInputEditText"
+                    android:background="@drawable/edit_rounded"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/user_Phone"
+                style="@style/TitleTextInputLayout"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_Phone"
+                    style="@style/TextInputEditText"
+                    android:background="@drawable/edit_rounded"
+                    android:drawableLeft="@drawable/ic_phone_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/phone_number"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/user_Password"
+                style="@style/TitleTextInputLayout"
+                app:errorEnabled="true"
+
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_Password"
+                    style="@style/TextInputEditText"
+                    android:background="@drawable/edit_rounded"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/user_Confirm_Password"
+                style="@style/TitleTextInputLayout"
+                app:errorEnabled="true"
+
+
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_Confirm_Password"
+                    style="@style/TextInputEditText"
+                    android:background="@drawable/edit_rounded"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+
+                android:id="@+id/btn_SignUp"
+                style="@style/Botton"
+                android:background="@drawable/rounded_button"
+                android:text="@string/sign_up" />
+
+            <Button
+
+                android:id="@+id/btn_Login"
+                style="@style/Botton"
+                android:background="@drawable/rounded_button"
+                android:text="@string/login_btn" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
