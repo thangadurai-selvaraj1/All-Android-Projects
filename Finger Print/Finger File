@@ -1,0 +1,50 @@
+implementation 'androidx.biometric:biometric:1.0.0-beta01'
+
+
+
+
+
+
+class MainActivity : AppCompatActivity() {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+        buttonEncrypt.setOnClickListener {
+            val executor = Executors.newSingleThreadExecutor()
+            val biometricPrompt =
+                BiometricPrompt(this, executor, object : BiometricPrompt.AuthenticationCallback() {
+                    override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                        Log.v("sss", "ssss")
+                        super.onAuthenticationSucceeded(result)
+                        print("ssssssss")
+                    }
+
+                    override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
+                        Log.v("ffffffff", "ffff")
+                        super.onAuthenticationError(errorCode, errString)
+                        print("fffffffff")
+
+                    }
+                })
+
+            val promptInfo = biometricPromptInfo()
+            biometricPrompt.authenticate(promptInfo)
+
+
+        }
+    }
+
+    private fun biometricPromptInfo(): BiometricPrompt.PromptInfo {
+        return BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Prompt Title")
+            .setSubtitle("Prompt Subtitle")
+            .setDescription("Prompt Description: lorem ipsum dolor sit amet.")
+            .setNegativeButtonText("cancel")
+            .build()
+    }
+
+}
