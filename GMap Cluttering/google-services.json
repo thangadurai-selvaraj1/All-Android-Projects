@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "226561022882",
+    "project_id": "gmap-cluttering",
+    "storage_bucket": "gmap-cluttering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226561022882:android:052e03f94ca18f348b30fb",
+        "android_client_info": {
+          "package_name": "com.alvin.gmapcluttering"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226561022882-i7dlokd6ngni8r581e9okt4655jrd0f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHkSrHo7d-HY_vaYCwDa5_OKzlhp86Llc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226561022882-i7dlokd6ngni8r581e9okt4655jrd0f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
