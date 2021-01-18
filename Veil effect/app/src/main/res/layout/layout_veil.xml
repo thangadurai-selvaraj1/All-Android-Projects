@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydoves.androidveil.VeilLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    app:veilLayout_baseAlpha="0.6"
+    app:veilLayout_baseColor="@color/white"
+    app:veilLayout_dropOff="0.8"
+    app:veilLayout_highlightAlpha="1.0"
+    app:veilLayout_highlightColor="@color/dark_grey"
+    app:veilLayout_layout="@layout/veil_layout"
+    app:veilLayout_radius="6dp"
+    app:veilLayout_shimmerEnable="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:text="Hello World!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:text="Hello World!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:text="Hello World!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:text="Hello World!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:text="Hello World!" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</com.skydoves.androidveil.VeilLayout>
+
+
