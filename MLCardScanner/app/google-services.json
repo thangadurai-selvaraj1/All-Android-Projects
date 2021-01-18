@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "859823365217",
+    "firebase_url": "https://my-project-1559027932481.firebaseio.com",
+    "project_id": "my-project-1559027932481",
+    "storage_bucket": "my-project-1559027932481.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859823365217:android:12fc902d26c8fbfd595e20",
+        "android_client_info": {
+          "package_name": "com.alvin.mlcardscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859823365217-qajailk34mvflgc60jb50h9q51e62lbk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alvin.mlcardscanner",
+            "certificate_hash": "e8712a8c6231bb710f62ffb1e6edd792457bc17e"
+          }
+        },
+        {
+          "client_id": "859823365217-cldph1hvj4ftst61hr2o2kl9c8ubklqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBceuCqrswY4UrTga3CVuzb8YzQbQEVYzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859823365217-cldph1hvj4ftst61hr2o2kl9c8ubklqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
